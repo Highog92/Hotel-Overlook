@@ -1,13 +1,11 @@
 import style from "./NewsCard.module.scss";
 
-export const NewsCard = ({ imgSrc, title, text, handleModal }) => {
+export const NewsCard = ({ imgSrc, title, text}) => {
   return (
     <div className={style.newsCardStyle}>
       <img src={imgSrc}></img>
       <section>
-        <h3>{title}</h3>
-        {text && <p>{text}</p>}
-        <p onClick={() => handleModal()}>Læs mere</p>
+        <p>Læs mere</p>
       </section>
     </div>
   );

@@ -3,11 +3,16 @@
   max-width: 400px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0px 5px 20px -7px #000000, 0px 20px 3px 8px rgba(0, 0, 0, 0);
+  font-size: 5rem;
 
   section {
-    grid-template-rows: 1fr 1fr 1fr;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
   }
+
   img {
     width: 100%;
+
   }
 }
