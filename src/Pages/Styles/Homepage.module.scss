@@ -18,25 +18,21 @@
     }
 
 }
-
-@media (max-width: 360px) {
-
-    .landing {
-        margin-left: 100px;
-
-        p {
-            font-size: 1.2rem;
-        }
-
-        h2 {
-            font-size: 2rem;
-            height: 4rem;
-            width: 4rem;
-        }
-
-        li {
-            font-size: 1rem;
-        }
-
+.newsCardWrapper {
+    display: grid;
+    width: 90%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+  
+  .newsDetailsWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 16px;
+  
+    img {
+      width: 100%;
     }
-}
+  }

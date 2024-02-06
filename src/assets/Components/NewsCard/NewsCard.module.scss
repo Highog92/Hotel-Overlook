@@ -1,0 +1,13 @@
+.newsCardStyle {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+
+  section {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  img {
+    width: 100%;
+  }
+}
