@@ -26,13 +26,13 @@ export function Homepage() {
     //   ----------------------------------------------------------------
 
     const news = useFetch(`http://localhost:4000/destinations`);
-    console.log(news);
+    console.log(news, "distinationer");
     const newsDetails = useFetch(
         `http://localhost:4000/destinations/${selectedID}`
     );
 
     const imageList = useFetch(`http://localhost:4000/imagelist`)
-
+console.log(imageList, "Billedliste");
     //   ----------------------------------------------------------------
 
     return (
@@ -40,31 +40,35 @@ export function Homepage() {
             <h1>Forside</h1>
             <Title title="Sidste nyt" />
             <section className={homepageStyling.newsCardWrapper}>
-                imageList?.map((image)) => {
-                    return(
-                <NewsCard
-                    imgSrc={item.CountryImage.country_image_filename}
-                />
-                )
-                }
-
-                {news?.map((item) => {
+              
+            {imageList.slice(49, 52).map((item) => {
                     return (
                         <NewsCard
-                            key={item.id}
-                            title={item.name}
-                            text={item.description}
-                            imgSrc={item.CountryImage.country_image_filename}
-                            handleModal={() => handleModal()}
+                            // key={item.id}
+                            imgSrc={item.filename}
                         />
                     );
                 })}
             </section>
-            {/* "http://localhost:4000/images/nyhed-island.jpeg" */}
             <Title title="Se vores udvalg af værelser" />
             <section>
-                <p>alsdkfnsdlfkm</p>
+
+
             </section>
         </section>
     )
 }
+
+
+// "http://localhost:4000/images/nyhed-island.jpeg"
+// {news?.map((item) => {
+//     return (
+//         <NewsCard
+//             key={item.id}
+//             title={item.name}
+//             text={item.description}
+//             imgSrc={item.CountryImage.country_image_filename}
+//             handleModal={() => handleModal()}
+//         />
+//     );
+// })}

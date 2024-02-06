@@ -1,23 +1,46 @@
 .footerStyle {
-  width: 100%;
-  margin-top: auto;
-  height: 40vh;
-  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  // width: 100%;
+  height: 60px;
+  background-color: rgb(250, 240, 240);
+  font-size: 0.5rem;
+  padding: 0 200px;
 
-  section {
-    width: 50%;
-    margin: auto;
-    grid-template-rows: auto;
-    display: grid;
-    color: white;
-    text-align: center;
-
-    justify-content: center;
+  nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     align-items: center;
+    padding: 20px;
 
-    img {
-      width: 75%;
-      margin: auto;
+    ul {
+      display: flex;
+      list-style-type: none;
+      justify-content: end;
+      gap: 10px;
+      align-items: center;
+    }
+
+
+    a {
+      display: flex;
+      text-decoration: none;
+      align-items: center;
     }
   }
+
+}
+
+.socials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+
+  img {
+    width: 100%;
+  }
+
 }
