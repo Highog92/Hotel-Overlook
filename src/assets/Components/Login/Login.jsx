@@ -1,10 +1,11 @@
-export function Login() {
+import formStyle from './login.module.scss'
+
+
+export function Login({ submitAction, children }) {
 
   return (
     <section>
-      <h2>Login</h2>
-
-      
+      <form className={formStyle.form} onSubmit={(e) => submitAction(e)}>{children}</form>
     </section>
   )
 }

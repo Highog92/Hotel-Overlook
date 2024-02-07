@@ -1,0 +1,36 @@
+.HotelDestinations {
+
+
+    .countryNavigation {
+        display: flex;
+        flex-direction: column;
+        background-color: #e6dddd;
+        align-items: center;
+        padding: 20px;
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: end;
+            gap: 10px;
+            align-items: center;
+        }
+
+
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+
+    }
+}

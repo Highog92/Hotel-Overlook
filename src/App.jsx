@@ -4,8 +4,15 @@ import { MainLayout } from "./Layouts/Main";
 import { Homepage } from "./Pages/Homepage"
 import { HotelsDestinations } from './Pages/HotelDestinations';
 import { Reservation } from "./Pages/Reservation"
-import { Login } from "./Pages/Login";
+import { LoginPage } from "./Pages/LoginPage";
 import { Rooms } from "./Pages/Rooms";
+import { Denmark } from "./Pages/Destinations/Denmark";
+import { Sweden } from "./Pages/Destinations/Sweden";
+import { Poland } from "./Pages/Destinations/Poland";
+import { Norway } from "./Pages/Destinations/Norway";
+import { Island } from "./Pages/Destinations/Island";
+import { Germany } from "./Pages/Destinations/Germany";
+import { Finland } from "./Pages/Destinations/Finland";
 
 function App() {
 
@@ -18,7 +25,14 @@ function App() {
             <Route path="/hotel&destinations" index element={<HotelsDestinations title='HotelDestinations' />} />
             <Route path="/rooms" index element={<Rooms title='Rooms' />} />
             <Route path="/reservation" index element={<Reservation title='Reservation' />} />
-            <Route path="/login" index element={<Login title='Login' />} />
+            <Route path="/loginpage" index element={<LoginPage title='Login' />} />
+            <Route path="/denmark" element={<Denmark title="denmark" />} />
+            <Route path="/sweden" index element={<Sweden title='sweden' />} />
+            <Route path="/norway" index element={<Norway title='norway' />} />
+            <Route path="/finland" index element={<Finland title='finland' />} />
+            <Route path="/island" index element={<Island title='island' />} />
+            <Route path="/germany" index element={<Germany title='germany' />} />
+            <Route path="/poland" index element={<Poland title='poland' />} />
           </Route>
         </Routes>
       </BrowserRouter>
