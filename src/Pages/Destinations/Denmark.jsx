@@ -1,9 +1,11 @@
+import { CountryNav } from "../../assets/Components/Nav/CountryNav"
+
 export function Denmark() {
 
-    return (
-        <section>
+  return (
+    <section>
+      <CountryNav />
 
-      </section>
-    )
+    </section>
+  )
 }
- 

@@ -1,9 +1,10 @@
+import { CountryNav } from "../../assets/Components/Nav/CountryNav"
+
 export function Germany() {
 
-    return (
-        <section>
-
-      </section>
-    )
+  return (
+    <section>
+      <CountryNav />
+    </section>
+  )
 }
- 
