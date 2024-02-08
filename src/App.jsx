@@ -13,6 +13,8 @@ import { Norway } from "./Pages/Destinations/Norway";
 import { Island } from "./Pages/Destinations/Island";
 import { Germany } from "./Pages/Destinations/Germany";
 import { Finland } from "./Pages/Destinations/Finland";
+import { SignUpPage } from './Pages/SignUpPage';
+
 
 function App() {
 
@@ -26,6 +28,7 @@ function App() {
             <Route path="/rooms" index element={<Rooms title='Rooms' />} />
             <Route path="/reservation" index element={<Reservation title='Reservation' />} />
             <Route path="/loginpage" index element={<LoginPage title='Login' />} />
+            <Route path="/signuppage" index element={<SignUpPage title='signup' />} />
             <Route path="/denmark" element={<Denmark title="denmark" />} />
             <Route path="/sweden" index element={<Sweden title='sweden' />} />
             <Route path="/norway" index element={<Norway title='norway' />} />

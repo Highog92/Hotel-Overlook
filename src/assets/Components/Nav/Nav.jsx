@@ -9,13 +9,12 @@ export function Navigation() {
             <nav>
                 <Link to='/homepage'><h2>HOTEL OVERLOOK</h2></Link>
                 <ul>
-                    {/* <Breadcrumb> */}
                         <Link to='/homepage'><li>FORSIDE</li></Link>
                         <Link to='/hotel&destinations'><li>HOTELLER & DESTINATIONER</li></Link>
                         <Link to='/rooms'><li>VÆRELSER</li></Link>
                         <Link to='/reservation'><li>RESERVATION</li></Link>
                         <Link to='/loginPage'><li>LOGIN</li></Link>
-                    {/* </Breadcrumb> */}
+                        <Link to='/signuppage'><li>SIGNUP</li></Link>
                 </ul>
             </nav>
         </section>
