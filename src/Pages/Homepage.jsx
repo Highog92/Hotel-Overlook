@@ -20,7 +20,7 @@ export function Homepage() {
 
     return (
         <section className={homepageStyling.landing}>
-            <h1>Forside</h1>
+            <h1>Velkommen til hotel Overlook online</h1>
             <Title title="Sidste nyt" />
             <section className={homepageStyling.newsCardWrapper}>
 

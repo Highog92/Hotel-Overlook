@@ -23,6 +23,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MainLayout title='Homepage' />}>
+            <Route path="/" element={<Homepage title="Homepage" />} />
             <Route path="/homepage" element={<Homepage title="Homepage" />} />
             <Route path="/hotel&destinations" index element={<HotelsDestinations title='HotelDestinations' />} />
             <Route path="/rooms" index element={<Rooms title='Rooms' />} />

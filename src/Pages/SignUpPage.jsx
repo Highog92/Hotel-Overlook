@@ -30,11 +30,6 @@ export function SignUpPage() {
         body.append("refresh_token", refresh_tokenValue);
         body.append("groups", groupsValue);
 
-        console.log('firstname', event.target.username.value);
-        console.log('lastname', event.target.lastname.value);
-        console.log('email', event.target.email.value);
-        console.log('password', event.target.password.value);
-
 
 
 
@@ -61,8 +56,9 @@ export function SignUpPage() {
 
     return (
         <section className={SignUpPageStyle.SignUp}>
-            <h1>Sign Up</h1>
             <form onSubmit={(event) => handleSignup(event)}>
+                <h1>Sign Up</h1>
+                <p>Indtast dine informationer for at oprette en bruger</p>
                 <label htmlFor="">Firstname
                     <input name="firstname" type="text" />
                 </label>
@@ -75,7 +71,7 @@ export function SignUpPage() {
                 <label htmlFor="">Password
                     <input name="password" type="password" />
                 </label>
-                <input value="Sign up" type="submit" />
+                <input value="Sign up" type="submit" className={SignUpPageStyle.submit} />
             </form>
         </section >
     )

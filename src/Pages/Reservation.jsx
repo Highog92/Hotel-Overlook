@@ -40,18 +40,23 @@ export function Reservation() {
           <option value="5">5</option>
           <option value="6">6</option>
         </select>
+
         <p>Vælg prisklasse</p>
 
-        <label htmlFor="">
-          <input type="radio" />Normal
-        </label>
+        <div>
+          <input type="radio" />
+          <p>Normal</p>
+        </div>
 
-        <label htmlFor="">
-          <input type="radio" />Flex
-        </label>
+        <div>
+          <input type="radio" />
+          <p>Flex</p>
+        </div>
 
-        <input type="date" placeholder="Check-in dato" />
-        <input type="date" placeholder="Check-out dato" />
+        <div>
+          <input type="date" placeholder="Check-in dato" />
+          <input type="date" placeholder="Check-out dato" />
+        </div>
 
         <input type="text" name="firstname" placeholder="Fornavn" />
         <input type="text" name="lastname" placeholder="Efternavn(e)" />
@@ -61,16 +66,17 @@ export function Reservation() {
           <input type="number" placeholder="Telefon" />
         </div>
 
-        <textarea name="" id="" cols="30" rows="10" placeholder="Kommentar"></textarea>
-
-        <label htmlFor="">
-          <input type="checkbox" /> Jeg accepterer hermed Overlooks betingelser (sæt kryds)
-        </label>
+        <textarea name="" id="" cols="100" rows="80" placeholder="Kommentar"></textarea>
+        
+        <div>
+          <input type="checkbox" />
+          <p>Jeg accepterer hermed Overlooks betingelser (sæt kryds)</p>
+        </div>
 
         <button>Send reservation</button>
 
       </form>
 
-    </section>
+    </section >
   )
 }

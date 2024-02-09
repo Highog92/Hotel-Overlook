@@ -1,20 +1,23 @@
-import loginStyle from "./Styles/Login.module.scss"
-import { useState } from "react"
-
+import loginStyle from "./Styles/LoginPage.module.scss"
+import { useContext } from "react"
+import { UserContext } from "../Context/UserContext"
 
 export function LoginPage() {
 
-  const [message, setMessage] = useState("")
+  const { userData, setUserData } = useContext(UserContext)
+  console.log(userData);
 
   async function handleSignup(event) {
 
     event.preventDefault()
 
-    let url = "http://localhost:4000/users/1"
+    let url = "http://localhost:4000/login"
 
     let body = new URLSearchParams()
-    body.append('name', event.target.username.value)
+    body.append('username', event.target.username.value)
     body.append('password', event.target.password.value)
+
+
 
     console.log(body);
 
@@ -27,17 +30,18 @@ export function LoginPage() {
     try {
       let res = await fetch(url, options)
       let data = await res.json()
-      setMessage(data)
+      setUserData(data.user)
     } catch (err) {
       console.log(err);
     }
+
+
   }
   return (
     <section className={loginStyle.login}>
-      <h1>Login Page</h1>
-
-      {message && <b>{message}</b>}
       <form onSubmit={(event) => handleSignup(event)}>
+      <h1>Login Page</h1>
+      <p>Indtast dit brugernavn og adgangskode for at logge ind</p>
         <label htmlFor="">Username
           <input name="username" type="text" />
         </label>
@@ -45,7 +49,7 @@ export function LoginPage() {
         <label htmlFor="">Password
           <input name="password" type="password" />
         </label>
-        <input value="Login" type="submit" />
+        <input value="Login" type="submit" className={loginStyle.submit} />
       </form>
 
     </section>
