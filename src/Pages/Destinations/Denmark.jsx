@@ -5,7 +5,6 @@ export function Denmark() {
   return (
     <section>
       <CountryNav />
-
     </section>
   )
 }

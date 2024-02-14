@@ -12,15 +12,12 @@ export function LoginPage() {
     event.preventDefault()
 
     let url = "http://localhost:4000/login"
-
+    
     let body = new URLSearchParams()
     body.append('username', event.target.username.value)
     body.append('password', event.target.password.value)
 
-
-
     console.log(body);
-
 
     let options = {
       method: "POST",

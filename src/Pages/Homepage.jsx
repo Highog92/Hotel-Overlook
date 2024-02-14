@@ -12,7 +12,6 @@ export function Homepage() {
     const news = useFetch(`http://localhost:4000/destinations`);
     console.log(news, "distinationer");
 
-
     const imageList = useFetch(`http://localhost:4000/imagelist`)
     console.log(imageList, "Billedliste");
 
@@ -52,16 +51,3 @@ export function Homepage() {
     )
 }
 
-
-// "http://localhost:4000/images/nyhed-island.jpeg"
-// {news?.map((item) => {
-//     return (
-//         <NewsCard
-//             key={item.id}
-//             title={item.name}
-//             text={item.description}
-//             imgSrc={item.CountryImage.country_image_filename}
-//             handleModal={() => handleModal()}
-//         />
-//     );
-// })}

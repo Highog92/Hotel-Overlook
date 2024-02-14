@@ -4,13 +4,13 @@ import SignUpPageStyle from "./Styles/SignUpPage.module.scss"
 
 export function SignUpPage() {
 
-
-
     async function handleSignup(event) {
-
-
+        
+        // Denne linje gør at siden ikke opdatere når man trykker på submit
         event.preventDefault()
 
+        // Nødvendige variabler for at kunne oprette en bruger. 
+        // https://documenter.getpostman.com/view/6540576/2s9Y5SXRwU#3bb735ce-f5c3-4542-94ec-929a590f29be
         const activeValue = 1;
         const org_idValue = 1;
         const refresh_tokenValue = "1234";
@@ -25,16 +25,14 @@ export function SignUpPage() {
         body.append('lastname', event.target.lastname.value)
         body.append('email', event.target.email.value)
         body.append('password', event.target.password.value)
+        
+
         body.append("is_active", activeValue);
         body.append("org_id", org_idValue);
         body.append("refresh_token", refresh_tokenValue);
         body.append("groups", groupsValue);
 
-
-
-
         console.log(body);
-
 
         let options = {
             method: "POST",

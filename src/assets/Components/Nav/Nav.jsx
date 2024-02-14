@@ -1,12 +1,15 @@
-import { Link } from 'react-router-dom';
 import navStyle from './nav.module.scss'
 import logo from '../../logo.svg'
+
+
+import { Link } from 'react-router-dom';
 
 export function Navigation() {
 
     return (
         <section className={navStyle.navigation}>
             <nav>
+                {/* Link er bare et <a> tag */}
                 <Link to='/homepage'><img src={logo} alt="" /></Link>
                 <ul>
                     <Link to='/homepage'><li>FORSIDE</li></Link>
@@ -21,7 +24,7 @@ export function Navigation() {
                     <li className={navStyle.pipes}>|</li>
                     <Link to='/signuppage'><li>SIGNUP</li></Link>
                 </ul>
-            </nav>
+            </nav> 
         </section>
     )
 }
